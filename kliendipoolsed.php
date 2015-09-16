@@ -12,8 +12,15 @@
 
 <a href="#" onclick="alert('Jääme siia!')">Jääme siia!</a>
 
-<img id="cat" onclick=getElementById("cat").src="ASSETS/pictures/dog.jpg" src="ASSETS/pictures/cat.jpg">
+<!--<img id="cat" onclick=getElementById("cat").src="ASSETS/pictures/dog.jpg" src="ASSETS/pictures/cat.jpg">-->
+<img id="pic1" src="ASSETS/pictures/cat.jpg "/>
 
-
+<script>
+    $(document).ready(function () {
+        $('#pic1').click(function () {
+            $(this).replaceWith('<img src="ASSETS/pictures/dog.jpg"/>');
+        });
+    });
+</script>
 </body>
 </html>
