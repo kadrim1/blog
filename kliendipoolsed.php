@@ -2,7 +2,7 @@
 <html lang="et">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Mihhailova</title>
 </head>
 <body>
 
