@@ -2,6 +2,7 @@
 <html lang="et">
 <head>
     <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <title>Mihhailova</title>
 </head>
 <body>
@@ -11,9 +12,8 @@
 
 <a href="#" onclick="alert('Jääme siia!')">Jääme siia!</a>
 
-<div onclick=document.getElementById("cat").src="ASSETS/pictures/dog.jpg">
-    <img id="cat" src="ASSETS/pictures/cat.jpg">
-</div>
+<img id="cat" onclick=getElementById("cat").src="ASSETS/pictures/dog.jpg" src="ASSETS/pictures/cat.jpg">
+
 
 </body>
-</html><
+</html>
