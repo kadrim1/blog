@@ -12,11 +12,17 @@ class Isik
     var $sugu = "naine";
 }
 
-$kadri = new Isik;
+$person = new Isik;
 
-$eesnimi_algab_vokaaliga = false;
+$vowels = array('A', 'E', 'I', 'O', 'U', 'Õ', 'Ä', 'Ö', 'Ü', 'a', 'e', 'i', 'o', 'u', 'õ', 'ä', 'ö', 'ü');
+if (in_array(substr($person->ees, 0, 1), $vowels)) {
+    $eesnimi_algab_vokaaliga = true;
+} else {
+    $eesnimi_algab_vokaaliga = false;
+}
 
-echo "<p>" . $kadri->ees . " " . $kadri->pere . " (" . $kadri->vanus . ")</p>";
+
+echo "<p>" . $person->ees . " " . $person->pere . " (" . $person->vanus . ")</p>";
 
 if ($eesnimi_algab_vokaaliga) {
     echo "<p>Nimi algab vokaaliga</p>";
