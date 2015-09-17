@@ -21,8 +21,10 @@
     <button id="button3">Blue</button>
 </span>
 
+<button id="allow_click">Luba parem klõps</button>
 
 <script>
+
     $(document).ready(function () {
         //pildivahetus
 
@@ -40,12 +42,18 @@
         $('#button3').click(function () {
             $('body').css('backgroundColor', $('#button3').text());
         });
+
         //paremakliki keelamine
-        $(document).on("contextmenu", function (e) {
-            if (e.target.nodeName != "INPUT" && e.target.nodeName != "TEXTAREA")
-                e.preventDefault();
+        $(document).on("contextmenu", function () {
+            return false;
+
+            //parema kliki taaslubamine
+        });
+        $("#allow_click").click(function () {
+            $(document).unbind();
         });
     });
+
 
 </script>
 
