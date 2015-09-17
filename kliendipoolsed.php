@@ -23,6 +23,8 @@
 
 <button id="allow_click">Luba parem klõps</button>
 
+<button id="hide_cat">Peida/näita kassiga pilt</button>
+
 <script>
 
     $(document).ready(function () {
@@ -52,6 +54,10 @@
         $("#allow_click").click(function () {
             $(document).unbind();
         });
+        $('#hide_cat').click(function () {
+            $('#pic1').toggle();
+        });
+
     });
 
 
