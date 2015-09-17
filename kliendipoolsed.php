@@ -24,10 +24,13 @@
 
 <script>
     $(document).ready(function () {
+        //pildivahetus
+
         $('#pic1').click(function () {
             $(this).replaceWith('<img src="ASSETS/pictures/dog.jpg"/>');
         });
 
+        //buttonite värvivahetus
         $('#button1').click(function () {
             $('body').css('backgroundColor', $('#button1').text());
         });
@@ -36,6 +39,11 @@
         });
         $('#button3').click(function () {
             $('body').css('backgroundColor', $('#button3').text());
+        });
+        //paremakliki keelamine
+        $(document).on("contextmenu", function (e) {
+            if (e.target.nodeName != "INPUT" && e.target.nodeName != "TEXTAREA")
+                e.preventDefault();
         });
     });
 
