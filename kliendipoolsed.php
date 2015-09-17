@@ -27,14 +27,15 @@
         $('#pic1').click(function () {
             $(this).replaceWith('<img src="ASSETS/pictures/dog.jpg"/>');
         });
+
         $('#button1').click(function () {
-            $('body').css('backgroundColor', 'red');
+            $('body').css('backgroundColor', $('#button1').text());
         });
         $('#button2').click(function () {
-            $('body').css('backgroundColor', 'green');
+            $('body').css('backgroundColor', $('#button2').text());
         });
         $('#button3').click(function () {
-            $('body').css('backgroundColor', 'blue');
+            $('body').css('backgroundColor', $('#button3').text());
         });
     });
 
