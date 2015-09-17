@@ -1,8 +1,10 @@
 <?php
 $ees = "Kadri";
 $pere = "Mihhailova";
+$vanus = 26;
 
-echo "<p>$ees $pere</p>";
+
+echo "<p>$ees $pere ($vanus)</p>";
 
 
 ?>
