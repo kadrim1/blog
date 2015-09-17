@@ -2,7 +2,7 @@
 $ees = "Kadri";
 $pere = "Mihhailova";
 
-echo $ees . ' ' . $pere;
+echo "<p>$ees $pere</p>";
 
 
 ?>
