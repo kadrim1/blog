@@ -25,6 +25,7 @@
 
 <button id="hide_cat">Peida/näita kassiga pilt</button>
 
+
 <script>
 
     $(document).ready(function () {

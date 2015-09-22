@@ -40,5 +40,5 @@ if ($eesnimi_algab_vokaaliga) {
     echo "<p>Nimi algab vokaaliga</p>";
 };
 
-
+echo $_GET['koer'];
 ?>
