@@ -103,6 +103,7 @@
                     <h3 class="post-subtitle">
                         Problems look mighty small from 150 miles up
                     </h3>
+
                 </a>
 
                 <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p>
