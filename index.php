@@ -28,6 +28,7 @@ $posts = Array(
     <meta name="description" content="">
     <meta name="author" content="">
 
+
     <title>Clean Blog</title>
 
     <!-- Bootstrap Core CSS -->
