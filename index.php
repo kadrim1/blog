@@ -1,20 +1,18 @@
 <?php
-$posts = Array(
-    Array(
-        'title' => 'Man must explore, and this is exploration at its greatest',
-        'subtitle' => 'Problems look mighty small from 150 miles up',
-        'author' => 'Start Bootstrap',
-        'date' => 'September 24, 2014',
-    ),
-    Array(
-        'title' => 'Shemale is good',
-        'subtitle' => 'And smart',
-        'author' => 'Beibs Kuum',
-        'date' => 'May 11, 2015',
-    )
-);
+//Connect database
+$db = mysqli_connect('localhost', 'root', '', 'blog') or die(mysqli_error($db));
+mysqli_query($db, "SET NAMES 'utf8'");
 
-
+//Retrieve data from database
+$q = mysqli_query($db, "SELECT * FROM posts NATURAL JOIN authors"); //Jesus, kes paneb andmebaasi tabeli nimeks $posts !? :D
+// var_dump($q); // :  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in..
+// See tähendab, et mysqli_fetch_assoc meetodile anti päringu tulemuse asemel boolean, var_dump näitab, et false.. miks?
+// Sellepärast, et päring ei saanud vastuseks ühtegi rida! Sest su SQL-is viidatakse tabelile posts aga reaalselt oled
+// DB-sse tekitanud tabeli $posts :D
+$posts = Array();
+while ($row = mysqli_fetch_assoc($q)) {
+    $posts[] = $row;
+}
 ?>
 
 <!DOCTYPE html>
@@ -122,13 +120,13 @@ $posts = Array(
                     </h2>
 
                     <h3 class="post-subtitle">
-                        <?php echo $post['subtitle'] ?>
+                        <?php echo $post['description'] ?>
                     </h3>
 
                 </a>
 
                 <p class="post-meta">Posted by <a
-                        href="#"><?php echo $post['author'] ?></a> <?php echo $post['date'] ?></p>
+                        href="#"><?php echo $post['name'] ?></a> <?php echo $post['date'] ?></p>
             </div>
             <hr>
 
@@ -141,7 +139,7 @@ $posts = Array(
             </ul>
         </div>
     </div>
-    <? endforeach ?>
+    <? endforeach; ?>
 </div>
 
 <hr>
