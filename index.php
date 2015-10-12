@@ -1,14 +1,11 @@
 <?php
 //Connect database
-$db = mysqli_connect('localhost', 'root', '', 'blog') or die(mysqli_error($db));
-mysqli_query($db, "SET NAMES 'utf8'");
+//$db = mysqli_connect('localhost', 'root', '', 'blog') or die(mysqli_error($db));
+//mysqli_query($db, "SET NAMES 'utf8'");
+require 'database.php';
 
 //Retrieve data from database
-$q = mysqli_query($db, "SELECT * FROM posts NATURAL JOIN authors"); //Jesus, kes paneb andmebaasi tabeli nimeks $posts !? :D
-// var_dump($q); // :  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in..
-// See tähendab, et mysqli_fetch_assoc meetodile anti päringu tulemuse asemel boolean, var_dump näitab, et false.. miks?
-// Sellepärast, et päring ei saanud vastuseks ühtegi rida! Sest su SQL-is viidatakse tabelile posts aga reaalselt oled
-// DB-sse tekitanud tabeli $posts :D
+$q = mysqli_query($db, "SELECT * FROM posts NATURAL JOIN authors");
 $posts = Array();
 while ($row = mysqli_fetch_assoc($q)) {
     $posts[] = $row;
